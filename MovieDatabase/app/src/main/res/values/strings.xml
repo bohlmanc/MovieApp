@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MovieDatabase</string>
 
@@ -16,4 +17,75 @@
     <string name="title_activity_run_info">RunInfo</string>
     <string name="title_activity_marigold_info">MarigoldInfo</string>
     <string name="title_activity_gunman_info">GunmanInfo</string>
+
+    <string-array name="movie_titles">
+        <item>Do You Believe?</item>
+        <item>Cinderella</item>
+        <item>Get Hard</item>
+        <item>The Gunman</item>
+        <item>Home</item>
+        <item>Insurgent</item>
+        <item>It Follows</item>
+        <item>Kingsman: The Secret Service</item>
+        <item>The Second Best Exotic Marigold Hotel</item>
+        <item>Run All Night</item>
+
+    </string-array>
+
+    <string-array name="movie_summaries">
+        <item>When a pastor is shaken by the visible faith of a street-corner preacher, he is reminded that true belief always requires action. His response ignites a journey that impacts everyone it touches in ways that only God could orchestrate.</item>
+        <item>When her father unexpectedly passes away, young Ella finds herself at the mercy of her cruel stepmother and her daughters. Never one to give up hope, Ella\'s fortunes begin to change after meeting a dashing stranger.</item>
+        <item>When millionaire James King is nailed for fraud and bound for San Quentin, he turns to Darnell Lewis to prep him to go behind bars.</item>
+        <item>A sniper on a mercenary assassination team, kills the minister of mines of the Congo. Terrier\'s successful kill shot forces him into hiding. Returning to the Congo years later, he becomes the target of a hit squad himself.</item>
+        <item>Oh, an alien on the run from his own people, lands on Earth and makes friends with the adventurous Tip, who is on a quest of her own.</item>
+        <item>Beatrice Prior must confront her inner demons and continue her fight against a powerful alliance which threatens to tear her society apart with the help from others on her side.</item>
+        <item>A young woman is followed by an unknown supernatural force after getting involved in a sexual confrontation.</item>
+        <item>A spy organization recruits an unrefined, but promising street kid into the agency\'s ultra-competitive training program, just as a global threat emerges from a twisted tech genius.</item>
+        <item>As the Best Exotic Marigold Hotel has only a single remaining vacancy - posing a rooming predicament for two fresh arrivals - Sonny pursues his expansionist dream of opening a second hotel.</item>
+        <item>Mobster and hit man Jimmy Conlon has one night to figure out where his loyalties lie: with his estranged son, Mike, whose life is in danger, or his longtime best friend, mob boss Shawn Maguire, who wants Mike to pay for the death of his own son.</item>
+
+    </string-array>
+
+    <string-array name="movie_reviews">
+        <item>Wherever you fall on the spectrum of spirituality, the only answer to "Do You Believe?" is "No."</item>
+        <item>Based on the classic fairy tale, but borrowing heavily from the 1950 film, Cinderella is enchanting, a wonderful and stylish film with a charming lead and emotional narrative.</item>
+        <item>Dumb, juvenile comedy has its place when it\'s funny. Unfortunately, too often in Get Hard, it\'s not.</item>
+        <item>A dull, generic retread, made far worse by Penn\'s self-seriousness as an actor, by the banal political pieties he\'s grafted on as producer and co-writer, and by the presence of a pitifully retrograde female lead role.</item>
+        <item>"Home" is a fine selection for a second quarter film and a great choice for your children.</item>
+        <item>I appreciate the attempt to try to make this world -- an obliterated, totalitarian Chicago -- as watchable as possible. But there\'s too much to keep straight.</item>
+        <item>The next time some old lady starts following you with an emotionless stare on her face, you are going to lose your mind.</item>
+        <item>One of the most smartly-crafted action films of recent years... [but] it has some grim, grim thoughts about human beings and society.</item>
+        <item>There is way too much going on. Parallel stories for all of these characters mean most all of them aren\'t fully developed.</item>
+        <item>Run All Night is a taut, edgy affair that features Neeson in peak action form and allows him to partially atone for the indignity of Taken 3.</item>
+
+    </string-array>
+
+    <integer-array name="movie_ratings">
+        <item>54</item>
+        <item>76</item>
+        <item>63</item>
+        <item>56</item>
+        <item>68</item>
+        <item>70</item>
+        <item>76</item>
+        <item>82</item>
+        <item>68</item>
+        <item>71</item>
+
+    </integer-array>
+
+    <integer-array name="movie_times">
+        <item>120</item>
+        <item>105</item>
+        <item>100</item>
+        <item>115</item>
+        <item>94</item>
+        <item>119</item>
+        <item>100</item>
+        <item>129</item>
+        <item>122</item>
+        <item>114</item>
+
+    </integer-array>
+
 </resources>

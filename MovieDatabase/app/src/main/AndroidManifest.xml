@@ -19,56 +19,69 @@
             </intent-filter>
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".About"
-            android:label="@string/title_activity_about" >
+            android:label="About" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".Web"
-            android:label="@string/title_activity_web" >
+            android:label="Web" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".Info"
-            android:label="@string/title_activity_info" >
+            android:label="Info" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".HomeInfo"
             android:label="@string/title_activity_home_info" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".ItFollowsInfo"
-            android:label="@string/title_activity_it_follows_info" >
+            android:label="ItFollowsInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".GetHardInfo"
-            android:label="@string/title_activity_get_hard_info" >
+            android:label="GetHardInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".CinderellaInfo"
-            android:label="@string/title_activity_cinderella_info" >
+            android:label="CinderellaInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".InsurgentInfo"
-            android:label="@string/title_activity_insurgent_info" >
+            android:label="InsurgentInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".KingsmanInfo"
-            android:label="@string/title_activity_kingsman_info" >
+            android:label="KingsmanInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".BelieveInfo"
-            android:label="@string/title_activity_believe_info" >
+            android:label="BelieveInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".RunInfo"
             android:label="@string/title_activity_run_info" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".MarigoldInfo"
-            android:label="@string/title_activity_marigold_info" >
+            android:label="MarigoldInfo" >
         </activity>
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".GunmanInfo"
-            android:label="@string/title_activity_gunman_info" >
+            android:label="GunmanInfo" >
         </activity>
     </application>
 

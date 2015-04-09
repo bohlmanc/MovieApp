@@ -1,13 +1,13 @@
 package com.example.cody.moviedatabase;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Activity;
 
 
-public class GetHardInfo extends ActionBarActivity {
+public class GetHardInfo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,15 +1,14 @@
 package com.example.cody.moviedatabase;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.content.Intent;
+import android.app.Activity;
 
 
-
-public class Web extends ActionBarActivity {
+public class Web extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,26 +35,6 @@ public class Web extends ActionBarActivity {
 
         if(id == R.id.action_main) {
             this.finish();
-            return true;
-        }
-        if(id == R.id.action_web) {
-            this.finish();
-            Intent intent = new Intent(this, Web.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
-            return true;
-        }
-        if(id == R.id.action_About) {
-            this.finish();
-            Intent intent = new Intent(this, About.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
-            return true;
-        }
-        if(id == R.id.action_info) {
-            this.finish();
-            Intent intent = new Intent(this, Info.class);
-            overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
             return true;
         }
 

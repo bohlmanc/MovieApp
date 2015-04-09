@@ -5,9 +5,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Activity;
+import android.widget.ArrayAdapter;
 
 
-public class MarigoldInfo extends ActionBarActivity {
+public class MarigoldInfo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

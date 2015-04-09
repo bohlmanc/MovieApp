@@ -9,6 +9,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/listCellTextView"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
 </LinearLayout>

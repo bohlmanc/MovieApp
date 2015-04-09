@@ -6,11 +6,17 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/movie_titles"
+        android:id="@+id/spinner" />
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"
+        android:layout_weight="0.56"
         android:background="#FFFFFF"
         android:clickable="true" />
 
