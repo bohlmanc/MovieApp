@@ -19,7 +19,8 @@ public class MainActivity extends ListActivity {
     private Spinner spinner;
     public static String titleSelected;
     private String[] titles, reviews, summaries;
-    private int[] times, ratings;
+    private int[] times;
+    private long[] ratings;
     private int[] images;
 
     @Override
@@ -30,7 +31,7 @@ public class MainActivity extends ListActivity {
                                 "Insurgent", "It Follows", "Kingsman: The Secret Service",
                                 "The Second Best Exotic Marigold Hotel", "Run All Night"};
         times = new int[] {120, 105, 100, 115, 94, 119, 100, 129, 122, 114};
-        ratings = new int[] {54, 76, 63, 56, 68, 70, 76, 82, 68, 71};
+        ratings = new long[] {54, 76, 63, 56, 68, 70, 76, 82, 68, 71};
         reviews = new String[] {"Wherever you fall on the spectrum of spirituality, the only answer to \"Do You Believe?\" is \"No.\"",
                                 "Based on the classic fairy tale, but borrowing heavily from the 1950 film, Cinderella is enchanting, a wonderful and stylish film with a charming lead and emotional narrative.",
                                 "Dumb, juvenile comedy has its place when it\'s funny. Unfortunately, too often in Get Hard, it\'s not.",
@@ -123,7 +124,7 @@ public class MainActivity extends ListActivity {
             String title = titles[index];
             String review = reviews[index];
             int time = times[index];
-            int rating = times[index];
+            long rating = ratings[index];
             String summary = summaries[index];
             long image = images[index];
 
@@ -144,9 +145,10 @@ public class MainActivity extends ListActivity {
 
             }
             else if (activityKey.equals("Reviews")) {
-                nextActivity = new Intent(this, About.class); // NEED TO CHANGE THIS TO THE REVIEWS PAGE
+                nextActivity = new Intent(this, ReviewActivity.class); // NEED TO CHANGE THIS TO THE REVIEWS PAGE
                 nextActivity.putExtra(ReviewActivity.TITLE,title);
                 nextActivity.putExtra(ReviewActivity.REVIEW,review);
+                nextActivity.putExtra(ReviewActivity.RATING,rating);
             }
             startActivity(nextActivity);
             overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);

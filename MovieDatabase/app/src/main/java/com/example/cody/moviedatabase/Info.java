@@ -77,9 +77,9 @@ public class Info extends Activity {
             summary = getIntent().getStringExtra(SUMMARY);
             changeView.setText(summary);
 
-            changeView = (TextView) findViewById(R.id.textView5);
-            time = getIntent().getLongExtra(TIME, -1L);
-            changeView.setText("Running time: " + time + " minutes.");
+            //changeView = (TextView) findViewById(R.id.textView5);
+            //time = getIntent().getLongExtra(TIME, -1L);
+            //changeView.setText("Running time: " + time + " minutes.");
 
             imageResource = getIntent().getLongExtra(IMAGE_RESOURCE, 0L);
 

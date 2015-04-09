@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.app.Activity;
+import android.webkit.WebViewClient;
 
 
 public class TrailerActivity extends Activity {
@@ -53,7 +54,10 @@ public class TrailerActivity extends Activity {
 
     public void openTrailer() {
         WebView myWebView = (WebView) findViewById(R.id.trailerView);
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.setWebViewClient(new WebViewClient());
         myWebView.loadUrl(currentURL);
+
     }
 
     @Override

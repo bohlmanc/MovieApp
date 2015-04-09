@@ -19,7 +19,7 @@ public class SpinnerListener implements OnItemSelectedListener {
     public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
         movieTitle = parent.getItemAtPosition(pos).toString();
         Toast.makeText(parent.getContext(),
-                "OnItemSelectedListener : " + movieTitle,
+                "Current selection: " + movieTitle,
                 Toast.LENGTH_SHORT).show();
         MainActivity.setTitle(getMovieTitle());
     }
