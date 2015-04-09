@@ -139,7 +139,8 @@ public class MainActivity extends ListActivity {
                 //Info.setInfo(title, time, summary, image);
             }
             else if (activityKey.equals("Movie Trailer")) {
-                nextActivity = new Intent(this, Web.class);
+                nextActivity = new Intent(this, TrailerActivity.class);
+                nextActivity.putExtra(TrailerActivity.RAW_NAME, title);
 
             }
             else if (activityKey.equals("Reviews")) {

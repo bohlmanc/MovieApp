@@ -87,5 +87,6 @@
         <item>114</item>
 
     </integer-array>
+    <string name="title_activity_trailer">TrailerActivity</string>
 
 </resources>
