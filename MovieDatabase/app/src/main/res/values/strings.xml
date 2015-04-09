@@ -88,5 +88,6 @@
 
     </integer-array>
     <string name="title_activity_trailer">TrailerActivity</string>
+    <string name="title_activity_review">ReviewActivity</string>
 
 </resources>

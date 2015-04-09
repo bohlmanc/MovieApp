@@ -145,6 +145,8 @@ public class MainActivity extends ListActivity {
             }
             else if (activityKey.equals("Reviews")) {
                 nextActivity = new Intent(this, About.class); // NEED TO CHANGE THIS TO THE REVIEWS PAGE
+                nextActivity.putExtra(ReviewActivity.TITLE,title);
+                nextActivity.putExtra(ReviewActivity.REVIEW,review);
             }
             startActivity(nextActivity);
             overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);

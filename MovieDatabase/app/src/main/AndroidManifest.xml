@@ -23,7 +23,6 @@
             android:label="About"
             android:parentActivityName=".MainActivity" >
         </activity>
-
         <activity
             android:name=".Info"
             android:label="Info"
@@ -83,7 +82,10 @@
             android:name=".TrailerActivity"
             android:label="@string/title_activity_trailer"
             android:parentActivityName=".MainActivity" >
-
+        </activity>
+        <activity
+            android:name=".ReviewActivity"
+            android:label="@string/title_activity_review" >
         </activity>
     </application>
 
