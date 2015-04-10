@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//Written by Cody Bohlman and Jonathan Brodie
 
 public class ListDemoAdapter extends ArrayAdapter<String> {
     public ListDemoAdapter(Context context, int resource, ArrayList<String> listItems) {

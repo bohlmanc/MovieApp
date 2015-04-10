@@ -12,6 +12,8 @@ import android.app.ListActivity;
 import android.widget.Spinner;
 import android.widget.ImageView;
 import android.os.Bundle;
+import android.widget.Toast;
+//Written by Cody Bohlman and Jonathan Brodie
 
 
 public class MainActivity extends ListActivity {
@@ -22,17 +24,22 @@ public class MainActivity extends ListActivity {
     private int[] times;
     private long[] ratings;
     private int[] images;
+    private final String infoString="Information";
+    private final String trailerString="Movie Trailer";
+    private final String reviewString="Reviews";
+    public static final String spinnerID="key";
+    public static final int spinnerCode=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        titles = new String[] {"Do You Believe?", "Cinderella", "Get Hard", "The Gunman", "Home",
+        this.titles = new String[] {"Do You Believe?", "Cinderella", "Get Hard", "The Gunman", "Home",
                                 "Insurgent", "It Follows", "Kingsman: The Secret Service",
                                 "The Second Best Exotic Marigold Hotel", "Run All Night"};
-        times = new int[] {120, 105, 100, 115, 94, 119, 100, 129, 122, 114};
-        ratings = new long[] {54, 76, 63, 56, 68, 70, 76, 82, 68, 71};
-        reviews = new String[] {"Wherever you fall on the spectrum of spirituality, the only answer to \"Do You Believe?\" is \"No.\"",
+        this.times = new int[] {120, 105, 100, 115, 94, 119, 100, 129, 122, 114};
+        this.ratings = new long[] {54, 76, 63, 56, 68, 70, 76, 82, 68, 71};
+        this.reviews = new String[] {"Wherever you fall on the spectrum of spirituality, the only answer to \"Do You Believe?\" is \"No.\"",
                                 "Based on the classic fairy tale, but borrowing heavily from the 1950 film, Cinderella is enchanting, a wonderful and stylish film with a charming lead and emotional narrative.",
                                 "Dumb, juvenile comedy has its place when it\'s funny. Unfortunately, too often in Get Hard, it\'s not.",
                                 "A dull, generic retread, made far worse by Penn\'s self-seriousness as an actor, by the banal political pieties he\'s grafted on as producer and co-writer, and by the presence of a pitifully retrograde female lead role.",
@@ -42,7 +49,7 @@ public class MainActivity extends ListActivity {
                                 "One of the most smartly-crafted action films of recent years... [but] it has some grim, grim thoughts about human beings and society.",
                                 "There is way too much going on. Parallel stories for all of these characters mean most all of them aren\'t fully developed.",
                                 "Run All Night is a taut, edgy affair that features Neeson in peak action form and allows him to partially atone for the indignity of Taken 3."};
-        summaries = new String[] {"When a pastor is shaken by the visible faith of a street-corner preacher, he is reminded that true belief always requires action. His response ignites a journey that impacts everyone it touches in ways that only God could orchestrate.",
+        this.summaries = new String[] {"When a pastor is shaken by the visible faith of a street-corner preacher, he is reminded that true belief always requires action. His response ignites a journey that impacts everyone it touches in ways that only God could orchestrate.",
                                   "When her father unexpectedly passes away, young Ella finds herself at the mercy of her cruel stepmother and her daughters. Never one to give up hope, Ella\'s fortunes begin to change after meeting a dashing stranger.",
                                   "When millionaire James King is nailed for fraud and bound for San Quentin, he turns to Darnell Lewis to prep him to go behind bars.",
                                   "A sniper on a mercenary assassination team, kills the minister of mines of the Congo. Terrier\'s successful kill shot forces him into hiding. Returning to the Congo years later, he becomes the target of a hit squad himself.",
@@ -52,14 +59,14 @@ public class MainActivity extends ListActivity {
                                   "A spy organization recruits an unrefined, but promising street kid into the agency\'s ultra-competitive training program, just as a global threat emerges from a twisted tech genius.",
                                   "As the Best Exotic Marigold Hotel has only a single remaining vacancy - posing a rooming predicament for two fresh arrivals - Sonny pursues his expansionist dream of opening a second hotel.",
                                   "Mobster and hit man Jimmy Conlon has one night to figure out where his loyalties lie: with his estranged son, Mike, whose life is in danger, or his longtime best friend, mob boss Shawn Maguire, who wants Mike to pay for the death of his own son."};
-        images = new int[] {R.drawable.believe, R.drawable.cinderella, R.drawable.gethard, R.drawable.gunman,
+        this.images = new int[] {R.drawable.believe, R.drawable.cinderella, R.drawable.gethard, R.drawable.gunman,
                             R.drawable.home, R.drawable.insurgent, R.drawable.itfollows, R.drawable.kingsman,
                             R.drawable.marigold, R.drawable.run};
 
         ArrayList<String> listItems = new ArrayList<String>();
-        listItems.add("Information");
-        listItems.add("Movie Trailer");
-        listItems.add("Reviews");
+        listItems.add(this.infoString);
+        listItems.add(this.trailerString);
+        listItems.add(this.reviewString);
 
         ListDemoAdapter adapter = new ListDemoAdapter(this, R.layout.list_cell, listItems);
         ListView listView = (ListView) this.findViewById(android.R.id.list);
@@ -80,7 +87,18 @@ public class MainActivity extends ListActivity {
         return true;
     }
 
+    //Gets the index of the spinner given the string
+    private int getIndex(Spinner spinner, String myString){
 
+        int index = 0;
+
+        for (int i=0;i<spinner.getCount();i++){
+            if (spinner.getItemAtPosition(i).equals(myString)){
+                index = i;
+            }
+        }
+        return index;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -129,7 +147,7 @@ public class MainActivity extends ListActivity {
             long image = images[index];
 
 
-            if (activityKey.equals("Information")) {
+            if (activityKey.equals(this.infoString)) {
                 System.out.println("IMAGE: " + image);
                 nextActivity.putExtra(Info.TITLE, title);
                 nextActivity.putExtra(Info.SUMMARY, summary);
@@ -137,21 +155,32 @@ public class MainActivity extends ListActivity {
                 nextActivity.putExtra(Info.IMAGE_RESOURCE, image);
                 System.out.println("Image should be: " + image);
 
-                //Info.setInfo(title, time, summary, image);
             }
-            else if (activityKey.equals("Movie Trailer")) {
+            else if (activityKey.equals(this.trailerString)) {
                 nextActivity = new Intent(this, TrailerActivity.class);
                 nextActivity.putExtra(TrailerActivity.RAW_NAME, title);
 
             }
-            else if (activityKey.equals("Reviews")) {
-                nextActivity = new Intent(this, ReviewActivity.class); // NEED TO CHANGE THIS TO THE REVIEWS PAGE
+            else if (activityKey.equals(this.reviewString)) {
+                nextActivity = new Intent(this, ReviewActivity.class);
                 nextActivity.putExtra(ReviewActivity.TITLE,title);
                 nextActivity.putExtra(ReviewActivity.REVIEW,review);
                 nextActivity.putExtra(ReviewActivity.RATING,rating);
             }
-            startActivity(nextActivity);
+            startActivityForResult(nextActivity, this.spinnerCode);
             overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode==this.spinnerCode) {
+            if (resultCode == RESULT_OK) {
+                String movieName = data.getStringExtra(MainActivity.spinnerID);
+                System.out.println(movieName);
+                int myIndex=this.getIndex(this.spinner,movieName);
+                this.spinner.setSelection(myIndex);
+            }
         }
     }
 

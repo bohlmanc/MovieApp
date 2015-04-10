@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.app.Activity;
 
+//Written by Cody Bohlman and Jonathan Brodie
 
 public class About extends Activity {
 
@@ -42,4 +43,5 @@ public class About extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

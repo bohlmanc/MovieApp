@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Toast;
 
+//Written by Cody Bohlman and Jonathan Brodie
 
 public class SpinnerListener implements OnItemSelectedListener {
 

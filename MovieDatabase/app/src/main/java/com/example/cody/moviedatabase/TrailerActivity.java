@@ -1,6 +1,7 @@
 package com.example.cody.moviedatabase;
 
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,13 +9,15 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.app.Activity;
 import android.webkit.WebViewClient;
-
+import android.widget.EditText;
+//Written by Cody Bohlman and Jonathan Brodie
 
 public class TrailerActivity extends Activity {
     private String searchURL="https://www.youtube.com/results?search_query=";
     public static String RAW_NAME="currentMovie";
     private String currentURL="";
 
+    //sets the current movie based on the info grabbed from the main activity
     public void setCurrentMovie(String movieName) {
         this.currentURL="";
         movieName=movieName.toLowerCase();
@@ -36,6 +39,7 @@ public class TrailerActivity extends Activity {
         String currentMovie;
         if (extras != null) {
             currentMovie= extras.getString(this.RAW_NAME);
+            this.RAW_NAME=currentMovie;
             this.setCurrentMovie(currentMovie);
         }
         super.onCreate(savedInstanceState);
@@ -71,7 +75,25 @@ public class TrailerActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == android.R.id.home) {
+            this.finishWithMovie();
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+    // Keeps the current movie selected
+    @Override
+    public void onBackPressed() {
+        this.finishWithMovie();
+    }
+    private void finishWithMovie() {
+        System.out.println("foo");
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra(MainActivity.spinnerID, this.RAW_NAME);
+        System.out.println(this.RAW_NAME);
+        this.setResult(RESULT_OK, returnIntent);
+        this.finish();
+        overridePendingTransition(R.anim.slide_in_from_left, R.anim.slide_out_to_right);
     }
 }
