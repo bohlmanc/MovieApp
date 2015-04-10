@@ -1,12 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_main" android:title="Home"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_info" android:title="Info"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_web" android:title="Web Browser"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cody.moviedatabase.Info">
     <item android:id="@+id/action_About" android:title="About"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>

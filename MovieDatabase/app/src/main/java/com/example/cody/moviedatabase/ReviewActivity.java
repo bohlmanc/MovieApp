@@ -60,7 +60,6 @@ public class ReviewActivity extends Activity {
         changeView.setText(this.movieReview);
 
         TextView progressOfBar = (TextView) findViewById(R.id.progressOfBar);
-        System.out.println("RATING=" + this.movieRating);
 
 
         class ProgressBarRunnable implements Runnable {
@@ -107,10 +106,7 @@ public class ReviewActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        } else if(id == android.R.id.home) {
+        if(id == android.R.id.home) {
             this.finishWithMovie();
             return true;
         }
@@ -123,10 +119,8 @@ public class ReviewActivity extends Activity {
         this.finishWithMovie();
     }
     private void finishWithMovie() {
-        System.out.println("foo");
         Intent returnIntent = new Intent();
         returnIntent.putExtra(MainActivity.spinnerID, this.movieName);
-        System.out.println(this.movieName);
         this.setResult(RESULT_OK, returnIntent);
         this.finish();
         overridePendingTransition(R.anim.slide_in_from_left, R.anim.slide_out_to_right);

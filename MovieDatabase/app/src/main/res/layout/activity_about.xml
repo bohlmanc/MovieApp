@@ -11,15 +11,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="On the list view, select a feature you'd like to explore. From here, press a movie in the displayed grid. "
+        android:text="To begin, select a movie from the dropdown menu on the top of the home screen. Then, choose a feature you would like to explore!"
         android:id="@+id/textView"
-        android:layout_gravity="left|top" />
+        android:layout_gravity="left|top"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/listclosed"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/listopen"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/gunman"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How to use this app:"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="35sp" />
 </RelativeLayout>

@@ -34,7 +34,6 @@ public class TrailerActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("We're creating a new activity!!!");
         Bundle extras = getIntent().getExtras();
         String currentMovie;
         if (extras != null) {
@@ -71,10 +70,6 @@ public class TrailerActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == android.R.id.home) {
             this.finishWithMovie();
             return true;
@@ -88,10 +83,8 @@ public class TrailerActivity extends Activity {
         this.finishWithMovie();
     }
     private void finishWithMovie() {
-        System.out.println("foo");
         Intent returnIntent = new Intent();
         returnIntent.putExtra(MainActivity.spinnerID, this.RAW_NAME);
-        System.out.println(this.RAW_NAME);
         this.setResult(RESULT_OK, returnIntent);
         this.finish();
         overridePendingTransition(R.anim.slide_in_from_left, R.anim.slide_out_to_right);

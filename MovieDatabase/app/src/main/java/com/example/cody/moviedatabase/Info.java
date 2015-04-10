@@ -82,7 +82,6 @@ public class Info extends Activity {
             this.imageResource = getIntent().getLongExtra(IMAGE_RESOURCE, 0L);
 
             ImageView changeImage = (ImageView) findViewById(R.id.imageView);
-            System.out.println("IR" + findViewById((int) this.imageResource));
             changeImage.setImageResource((int) this.imageResource);
         }
     }
@@ -99,10 +98,8 @@ public class Info extends Activity {
         this.finishWithMovie();
     }
     private void finishWithMovie() {
-        System.out.println("foo");
         Intent returnIntent = new Intent();
         returnIntent.putExtra(MainActivity.spinnerID, this.title);
-        System.out.println(this.title);
         this.setResult(RESULT_OK, returnIntent);
         this.finish();
         overridePendingTransition(R.anim.slide_in_from_left, R.anim.slide_out_to_right);

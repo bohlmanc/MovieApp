@@ -78,7 +78,6 @@ public class MainActivity extends ListActivity {
 
     public static void setTitle(String t) {
         titleSelected = t;
-        System.out.println(titleSelected);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -148,12 +147,10 @@ public class MainActivity extends ListActivity {
 
 
             if (activityKey.equals(this.infoString)) {
-                System.out.println("IMAGE: " + image);
                 nextActivity.putExtra(Info.TITLE, title);
                 nextActivity.putExtra(Info.SUMMARY, summary);
                 nextActivity.putExtra(Info.TIME, time);
                 nextActivity.putExtra(Info.IMAGE_RESOURCE, image);
-                System.out.println("Image should be: " + image);
 
             }
             else if (activityKey.equals(this.trailerString)) {
@@ -177,7 +174,6 @@ public class MainActivity extends ListActivity {
         if (requestCode==this.spinnerCode) {
             if (resultCode == RESULT_OK) {
                 String movieName = data.getStringExtra(MainActivity.spinnerID);
-                System.out.println(movieName);
                 int myIndex=this.getIndex(this.spinner,movieName);
                 this.spinner.setSelection(myIndex);
             }
